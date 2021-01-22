@@ -1,9 +1,11 @@
 package fr.cned.emdsgil.suividevosfrais;
 
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.View;
 import android.widget.DatePicker;
+import android.widget.EditText;
 
 import java.lang.reflect.Field;
 import java.util.Hashtable;
@@ -42,5 +44,15 @@ abstract class Global {
             Log.d("ERROR", e.getMessage());
         }
     }
+
+    public static final void nonSaisieEditText(EditText editText) {
+      editText.setFocusableInTouchMode(false);
+      editText.setFocusable(false);
+      editText.setLongClickable(false);
+      editText.setCursorVisible(false);
+      editText.setClickable(false);
+      editText.setBackgroundColor(Color.TRANSPARENT);
+    }
+
 
 }

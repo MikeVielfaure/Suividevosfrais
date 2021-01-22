@@ -1,7 +1,9 @@
 package fr.cned.emdsgil.suividevosfrais;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -11,6 +13,7 @@ import android.widget.DatePicker;
 import android.widget.DatePicker.OnDateChangedListener;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -38,6 +41,8 @@ public class KmActivity extends AppCompatActivity {
 		cmdPlus_clic() ;
 		cmdMoins_clic() ;
 		dat_clic() ;
+		//modification de saisie dans un EditText
+    Global.nonSaisieEditText(((EditText)findViewById(R.id.txtKm))); ;
 	}
 
 	@Override
@@ -154,4 +159,15 @@ public class KmActivity extends AppCompatActivity {
 		Intent intent = new Intent(KmActivity.this, MainActivity.class) ;
 		startActivity(intent) ;
 	}
+  /**
+   * Empêche la saisie manuelle des km dans la zone de saisie
+   */
+  private void nonSaisieEditText(EditText editText) {
+    editText.setFocusableInTouchMode(false);
+    editText.setFocusable(false);
+    editText.setLongClickable(false);
+    editText.setCursorVisible(false);
+    editText.setClickable(false);
+    editText.setBackgroundColor(Color.TRANSPARENT);
+  }
 }
