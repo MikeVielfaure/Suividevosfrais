@@ -1,4 +1,4 @@
-package fr.cned.emdsgil.suividevosfrais;
+package fr.cned.emdsgil.suividevosfrais.Modele;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,7 +11,11 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Locale;
 
-class FraisHfAdapter extends BaseAdapter {
+import fr.cned.emdsgil.suividevosfrais.Outils.Global;
+import fr.cned.emdsgil.suividevosfrais.Outils.Serializer;
+import fr.cned.emdsgil.suividevosfrais.R;
+
+public class FraisHfAdapter extends BaseAdapter {
 
 	private final ArrayList<FraisHf> lesFrais ; // liste des frais du mois
 	private final LayoutInflater inflater ;

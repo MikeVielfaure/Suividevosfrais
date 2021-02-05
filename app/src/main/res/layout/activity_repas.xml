@@ -10,7 +10,7 @@
   android:layout_alignParentTop="true"
   android:orientation="vertical"
   android:weightSum="1"
-  tools:context=".RepasActivity">
+  tools:context=".Vue.RepasActivity">
 
   <LinearLayout
     android:layout_width="match_parent"

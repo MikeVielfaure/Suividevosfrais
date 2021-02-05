@@ -1,4 +1,4 @@
-package fr.cned.emdsgil.suividevosfrais;
+package fr.cned.emdsgil.suividevosfrais.Modele;
 
 import java.io.Serializable;
 
@@ -6,12 +6,12 @@ import java.io.Serializable;
  * Classe métier contenant la description d'un frais hors forfait
  *
  */
-class FraisHf  implements Serializable {
+public class FraisHf  implements Serializable {
 
 	private final Float montant ;
 	private final String motif ;
 	private final Integer jour ;
-	
+
 	public FraisHf(Float montant, String motif, Integer jour) {
 		this.montant = montant ;
 		this.motif = motif ;
