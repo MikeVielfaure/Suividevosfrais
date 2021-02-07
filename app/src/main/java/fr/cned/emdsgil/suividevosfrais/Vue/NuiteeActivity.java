@@ -96,6 +96,10 @@ public class NuiteeActivity extends AppCompatActivity {
   private void cmdValider_clic() {
     findViewById(R.id.cmdNuiteeValider).setOnClickListener(new Button.OnClickListener() {
       public void onClick(View v) {
+        try {
+          qte = Integer.valueOf(((EditText) findViewById(R.id.txtNuitees)).getText().toString());
+          enregNewQte();
+        }catch (Exception e){}
         Serializer.serialize(Global.listFraisMois, NuiteeActivity.this) ;
         retourActivityPrincipale() ;
       }

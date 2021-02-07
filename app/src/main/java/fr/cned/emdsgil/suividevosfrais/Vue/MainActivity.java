@@ -74,7 +74,9 @@ public class MainActivity extends AppCompatActivity {
         cmdMenu_clic(((ImageButton) findViewById(R.id.cmdHfRecap)), HfRecapActivity.class);
         cmdMenu_clic(((ImageButton) findViewById(R.id.cmdNuitee)), NuiteeActivity.class);
         cmdMenu_clic(((ImageButton) findViewById(R.id.cmdEtape)), EtapesActivity.class);
+
         cmdMenu_clic(((ImageButton) findViewById(R.id.cmdRepas)), RepasActivity.class);
+
         cmdMenu_clic(((ImageButton) findViewById(R.id.cmdTransfert)), AuthentificationActivity.class);
         cmdTransfert_clic();
 
@@ -169,34 +171,26 @@ public class MainActivity extends AppCompatActivity {
       list.add(Serializer.deSerialize("identifiant", this).toString());
       list.add(Serializer.deSerialize("mdp", this).toString());
       Set keys = Global.listFraisMois.keySet();
-
       //obtenir un iterator des clés
       Iterator itr = keys.iterator();
-
       Object key;
       //affichage des pairs clé-valeur
       while (itr.hasNext()) {
         frais="";
         // obtenir la clé
         key = itr.next();
-          frais +="m"+Global.listFraisMois.get(key).getMois().toString()+"&KM"+Global.listFraisMois.get(key).getKm().toString()+
-            "&REP"+Global.listFraisMois.get(key).getRepas().toString()+"&NUI"+Global.listFraisMois.get(key).getNuitee().toString()+
-          "&ETP"+Global.listFraisMois.get(key).getEtape().toString();
+          frais +="m"+Global.listFraisMois.get(key).getMois().toString()+
+            "&KM"+Global.listFraisMois.get(key).getKm().toString()+
+            "&REP"+Global.listFraisMois.get(key).getRepas().toString()+
+            "&NUI"+Global.listFraisMois.get(key).getNuitee().toString()+
+            "&ETP"+Global.listFraisMois.get(key).getEtape().toString();
         for (int k = 0; k<Global.listFraisMois.get(key).getLesFraisHf().size();k++) {
-          frais +="&HF"+Global.listFraisMois.get(key).getLesFraisHf().get(k).getJour().toString()+"|A"+Global.listFraisMois.get(key).getAnnee().toString()+"|MOT"+
-            Global.listFraisMois.get(key).getLesFraisHf().get(k).getMotif().toString()+
+          frais +="&HF"+Global.listFraisMois.get(key).getLesFraisHf().get(k).getJour().toString()+
+            "|A"+Global.listFraisMois.get(key).getAnnee().toString()+
+            "|MOT"+ Global.listFraisMois.get(key).getLesFraisHf().get(k).getMotif().toString()+
             "|MON"+Global.listFraisMois.get(key).getLesFraisHf().get(k).getMontant().toString();
-
         }
-        /*
-        String[] message = frais.split("&");
-        frais="";
-        for (int i =0; i<message.length;i++){
-          frais+=message[i];
-        }*/
-        //frais += "&11";
         list.add(frais);
-        System.out.println("Key: " + key + " & Value: "+list.get(2));
       }
     }
 

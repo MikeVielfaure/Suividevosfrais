@@ -95,6 +95,10 @@ public class RepasActivity extends AppCompatActivity {
   private void cmdValider_clic() {
     findViewById(R.id.cmdRepasValider).setOnClickListener(new Button.OnClickListener() {
       public void onClick(View v) {
+        try {
+          qte = Integer.valueOf(((EditText) findViewById(R.id.txtRepas)).getText().toString());
+          enregNewQte();
+        }catch (Exception e){}
         Serializer.serialize(Global.listFraisMois, RepasActivity.this) ;
         retourActivityPrincipale() ;
       }
@@ -137,7 +141,7 @@ public class RepasActivity extends AppCompatActivity {
       // creation du mois et de l'annee s'ils n'existent pas déjà
       Global.listFraisMois.put(key, new FraisMois(annee, mois)) ;
     }
-    Global.listFraisMois.get(key).setRepas(qte); ;
+    Global.listFraisMois.get(key).setRepas(qte);
   }
 
 

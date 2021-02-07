@@ -95,6 +95,10 @@ public class EtapesActivity extends AppCompatActivity {
   private void cmdValider_clic() {
     findViewById(R.id.cmdEtapeValider).setOnClickListener(new Button.OnClickListener() {
       public void onClick(View v) {
+        try {
+          qte = Integer.valueOf(((EditText) findViewById(R.id.txtEtapes)).getText().toString());
+          enregNewQte();
+        }catch (Exception e){}
         Serializer.serialize(Global.listFraisMois, EtapesActivity.this) ;
         retourActivityPrincipale() ;
       }
