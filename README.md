@@ -22,7 +22,7 @@
  
  3.Documentation 
  
- - [vers la page du projet](https://vielfauremike.wixsite.com/portfolio/suividevosfrais) !
+ - [vers la page du projet](https://vielfauremike.wixsite.com/portfolio/suividevosfrais)
  
   
  
@@ -30,6 +30,6 @@
   
  4.Téléchargement de l'application
  
- - [télécharger](https://drive.google.com/file/d/1Sy8Ff85zytR8fQEssfOAqFZ5qqWHzWvt/view?usp=sharing) !
+ - [télécharger](https://drive.google.com/file/d/1Sy8Ff85zytR8fQEssfOAqFZ5qqWHzWvt/view?usp=sharing)
 
 
