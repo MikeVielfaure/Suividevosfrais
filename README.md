@@ -22,12 +22,10 @@
  
  3.Documentation 
  
-  - Vous trouverez un dossier Documentation associé à ce projet.
-  - Ou un lien direct : 
+  
  
   <br>
   
  4.Téléchargement de l'application
-  - Cela fait un point d'entrée professionnel à donner lorsque je postule à un stage, à une poursuite d'études ou a un emploi
-  - Cela permettra de me faire référencer par les moteurs de recherches (là aussi si on me recherche suite à ma rencontre ou à la réception de mon CV)
+
 
