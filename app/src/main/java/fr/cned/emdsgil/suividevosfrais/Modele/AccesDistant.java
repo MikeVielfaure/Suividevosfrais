@@ -18,7 +18,7 @@ import fr.cned.emdsgil.suividevosfrais.Outils.AsyncResponse;
 public class AccesDistant implements AsyncResponse {
 
     // constante
-      private static final String SERVERADDR ="http://saisiedevosfrais.000webhostapp.com/serveursuividevosfrais.php";
+      private static final String SERVERADDR ="https://saisiedevosfrais.alwaysdata.net/serveursuividevosfrais.php";
     //private static final String SERVERADDR = "http://192.168.43.190/Suividevosfrais/serveursuividevosfrais.php";
 
     private static final int STATE_VALIDE = 1;
@@ -84,9 +84,11 @@ public class AccesDistant implements AsyncResponse {
                     mHandler.sendMessage(msg);
                   }
                 }else{
-                  Message msg = new Message();
-                  msg.what = STATE_ERREUR;
-                  mHandler.sendMessage(msg);
+                  //if(message[0].equals("")) {
+                    Message msg = new Message();
+                    msg.what = STATE_ERREUR;
+                    mHandler.sendMessage(msg);
+                  //}
                 }
             }
         }else{
