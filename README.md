@@ -5,7 +5,7 @@
 1.Mettre en oeuvre une application Android, qui permet aux visiteurs de saisirs des frais et d'envoyer ces informations sur un serveur web qui se chargera ensuite de mettre à jour la base de données.
 
 - **AndroidStudio** : Environnement de développement intégré (IDE) utilisé pour ce projet.
-- **JAVASCRIPT** : Langage de programmation utilisé pour concevoir l'application Android.
+- **JAVA** : Langage de programmation utilisé pour concevoir l'application Android.
 - **PHP** : Langage de programmation utilisé du côté serveur.
 - **SQL** : Langage informatique utilisé pour l'exploitation de notre la base de données.
 - **Git** : Logiciel de gestion de version.
